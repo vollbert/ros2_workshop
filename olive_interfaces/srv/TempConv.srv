@@ -1,0 +1,5 @@
+# input: temperature in Celsius,   output: temperature in Kelvin and Fahrenheit
+float64 temp_c
+---
+float64 temp_k
+float64 temp_f
