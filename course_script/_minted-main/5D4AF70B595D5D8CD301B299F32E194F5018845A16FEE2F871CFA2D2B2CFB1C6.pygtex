@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{rclpy.qos} \PYG{k+kn}{import} \PYG{n}{QoSProfile}\PYG{p}{,} \PYG{n}{QoSDurabilityPolicy}\PYG{p}{,} \PYG{n}{QoSReliabilityPolicy}
+
+\PYG{n}{qos\PYGZus{}profile} \PYG{o}{=} \PYG{n}{QoSProfile}\PYG{p}{(}
+            \PYG{n}{depth}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,}
+            \PYG{n}{durability}\PYG{o}{=}\PYG{n}{QoSDurabilityPolicy}\PYG{o}{.}\PYG{n}{VOLATILE}\PYG{p}{,}
+            \PYG{n}{reliability}\PYG{o}{=}\PYG{n}{QoSReliabilityPolicy}\PYG{o}{.}\PYG{n}{BEST\PYGZus{}EFFORT}\PYG{p}{)}
+\end{Verbatim}

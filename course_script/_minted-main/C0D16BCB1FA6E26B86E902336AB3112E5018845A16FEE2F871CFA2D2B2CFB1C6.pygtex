@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class} \PYG{n+nc}{RandomNumberPublisher}\PYG{p}{(}\PYG{n}{Node}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}random\PYGZus{}number\PYGZus{}publisher\PYGZsq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publisher\PYGZus{}} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}publisher}\PYG{p}{(}\PYG{n}{Int32}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}random\PYGZus{}numbers\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}timer}\PYG{p}{(}\PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publish\PYGZus{}random\PYGZus{}number}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{publish\PYGZus{}random\PYGZus{}number}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{random\PYGZus{}number} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}logger}\PYG{p}{()}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}Publishing: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{random\PYGZus{}number}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{msg} \PYG{o}{=} \PYG{n}{Int32}\PYG{p}{()}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{data} \PYG{o}{=} \PYG{n}{random\PYGZus{}number}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publisher\PYGZus{}}\PYG{o}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{)}
+\end{Verbatim}

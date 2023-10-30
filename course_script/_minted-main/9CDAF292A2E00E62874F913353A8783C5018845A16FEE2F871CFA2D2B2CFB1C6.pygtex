@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{class} \PYG{n+nc}{TempService}\PYG{p}{(}\PYG{n}{Node}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}temp\PYGZus{}service\PYGZsq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{srv} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}service}\PYG{p}{(}\PYG{n}{TempConv}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}temp\PYGZus{}conversion\PYGZsq{}}\PYG{p}{,}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{temp\PYGZus{}conversion\PYGZus{}callback}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{temp\PYGZus{}conversion\PYGZus{}callback}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{request}\PYG{p}{,} \PYG{n}{response}\PYG{p}{):}
+        \PYG{n}{response}\PYG{o}{.}\PYG{n}{temp\PYGZus{}k} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{temp\PYGZus{}c} \PYG{o}{+} \PYG{l+m+mf}{273.15}
+        \PYG{n}{response}\PYG{o}{.}\PYG{n}{temp\PYGZus{}f} \PYG{o}{=} \PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{temp\PYGZus{}c} \PYG{o}{*} \PYG{l+m+mi}{9} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{32}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}logger}\PYG{p}{()}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}
+                \PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}Incoming request }\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{ Temperature in Celsius: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{request}\PYG{o}{.}\PYG{n}{temp\PYGZus{}c}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}
+                \PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{response}
+\end{Verbatim}

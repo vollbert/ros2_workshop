@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.30)  30 OCT 2023 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.30)  30 OCT 2023 11:42
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/home/fabian/Workspaces/ros2_workshop/course_script/main.tex
@@ -273,7 +273,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Cskip=\skip60
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
  (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
@@ -283,9 +283,10 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
+runsystem(uname -s > "main.w18")...executed.
 
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
+ (./main.w18)
+runsystem(rm -- "main.w18")...executed.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \integerpart=\count307
@@ -315,21 +316,9 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks35
 \c@listing=\count312
 )
-runsystem(mkdir -p _minted-main)...disabled (restricted).
+runsystem(mkdir -p _minted-main)...executed.
 
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:9: Package minted Error: You must invoke LaTeX with the -shell-escape flag.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 \usepackage
-               {geometry}
-Pass the -shell-escape flag to LaTeX. Refer to the minted.sty documentation for more information.
-
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -674,21 +663,11 @@ Package thmtools Info: Key `name' (with value `Info')
 (thmtools)             Will pass this to every \declaretheorem
 (thmtools)             that uses `style=infosty' on input line 74.
 \c@info=\count354
-runsystem(which pygmentize && touch main.aex)...disabled (restricted).
+runsystem(which pygmentize && touch main.aex)...executed.
 
+runsystem(rm main.aex)...executed.
 
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:91: Package minted Error: You must have `pygmentize' installed to use this package.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 \begin{document}
-                     
-Refer to the installation instructions in the minted documentation for more information.
-
-(./main.aux)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
@@ -713,7 +692,8 @@ LaTeX Font Info:    ... okay on input line 91.
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 91.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count355
 \scratchdimen=\dimen286
@@ -779,6 +759,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 91.
 LaTeX Info: Redefining \pageref on input line 91.
 LaTeX Info: Redefining \nameref on input line 91.
+ (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -795,7 +776,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 109.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
@@ -805,7 +786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--125
  []
 
 [3]
-<img/2./virtual_box_website.png, id=37, 1433.355pt x 681.29532pt>
+<img/2./virtual_box_website.png, id=241, 1433.355pt x 681.29532pt>
 File: img/2./virtual_box_website.png Graphic file (type png)
 <use img/2./virtual_box_website.png>
 Package pdftex.def Info: img/2./virtual_box_website.png  used on input line 143.
@@ -815,46 +796,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
-<img/2./ubuntu_website.png, id=40, 1445.4pt x 724.7075pt>
+<img/2./ubuntu_website.png, id=244, 1445.4pt x 724.7075pt>
 File: img/2./ubuntu_website.png Graphic file (type png)
 <use img/2./ubuntu_website.png>
 Package pdftex.def Info: img/2./ubuntu_website.png  used on input line 154.
 (pdftex.def)             Requested size: 397.48499pt x 199.28964pt.
 [4 <./img/2./virtual_box_website.png>]
-<img/2./virtual_box1_english.png, id=51, 724.20563pt x 412.54124pt>
+<img/2./virtual_box1_english.png, id=254, 724.20563pt x 412.54124pt>
 File: img/2./virtual_box1_english.png Graphic file (type png)
 <use img/2./virtual_box1_english.png>
 Package pdftex.def Info: img/2./virtual_box1_english.png  used on input line 162.
 (pdftex.def)             Requested size: 397.48499pt x 226.42627pt.
-<img/2./virtual_box2_english.png, id=52, 546.54187pt x 283.0575pt>
+<img/2./virtual_box2_english.png, id=255, 546.54187pt x 283.0575pt>
 File: img/2./virtual_box2_english.png Graphic file (type png)
 <use img/2./virtual_box2_english.png>
 Package pdftex.def Info: img/2./virtual_box2_english.png  used on input line 170.
 (pdftex.def)             Requested size: 397.48499pt x 205.86143pt.
  [5 <./img/2./ubuntu_website.png> <./img/2./virtual_box1_english.png>]
-<img/2./virtual_box3_english.png, id=60, 546.54187pt x 283.0575pt>
+<img/2./virtual_box3_english.png, id=263, 546.54187pt x 283.0575pt>
 File: img/2./virtual_box3_english.png Graphic file (type png)
 <use img/2./virtual_box3_english.png>
 Package pdftex.def Info: img/2./virtual_box3_english.png  used on input line 178.
 (pdftex.def)             Requested size: 397.48499pt x 205.86143pt.
-<img/2./virtual_box4_english.png, id=61, 546.54187pt x 283.0575pt>
+<img/2./virtual_box4_english.png, id=264, 546.54187pt x 283.0575pt>
 File: img/2./virtual_box4_english.png Graphic file (type png)
 <use img/2./virtual_box4_english.png>
 Package pdftex.def Info: img/2./virtual_box4_english.png  used on input line 186.
 (pdftex.def)             Requested size: 397.48499pt x 205.86143pt.
  [6 <./img/2./virtual_box2_english.png> <./img/2./virtual_box3_english.png>]
-<img/2./virtual_box5_english.png, id=68, 724.20563pt x 412.54124pt>
+<img/2./virtual_box5_english.png, id=271, 724.20563pt x 412.54124pt>
 File: img/2./virtual_box5_english.png Graphic file (type png)
 <use img/2./virtual_box5_english.png>
 Package pdftex.def Info: img/2./virtual_box5_english.png  used on input line 194.
 (pdftex.def)             Requested size: 397.48499pt x 226.42627pt.
-<img/2./virtual_box6_english.png, id=69, 504.38437pt x 368.87813pt>
+<img/2./virtual_box6_english.png, id=272, 504.38437pt x 368.87813pt>
 File: img/2./virtual_box6_english.png Graphic file (type png)
 <use img/2./virtual_box6_english.png>
 Package pdftex.def Info: img/2./virtual_box6_english.png  used on input line 202.
 (pdftex.def)             Requested size: 397.48499pt x 290.70131pt.
  [7 <./img/2./virtual_box4_english.png> <./img/2./virtual_box5_english.png>]
-<img/2./virtual_box7_english.png, id=77, 543.53062pt x 355.3275pt>
+<img/2./virtual_box7_english.png, id=280, 543.53062pt x 355.3275pt>
 File: img/2./virtual_box7_english.png Graphic file (type png)
 <use img/2./virtual_box7_english.png>
 Package pdftex.def Info: img/2./virtual_box7_english.png  used on input line 210.
@@ -969,19 +950,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--323
 [][][][]\OT1/fvm/m/n/8 https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-
  []
 
-
-LaTeX Warning: Reference `figure:Communication' on page 11 undefined on input line 323.
-
 [11]
-<img/3.4/image.png, id=140, 780.9175pt x 413.545pt>
+<img/3.4/image.png, id=342, 780.9175pt x 413.545pt>
 File: img/3.4/image.png Graphic file (type png)
 <use img/3.4/image.png>
 Package pdftex.def Info: img/3.4/image.png  used on input line 328.
 (pdftex.def)             Requested size: 397.48499pt x 210.49498pt.
-
-
-LaTeX Warning: Reference `fig:understanding_nodes' on page 12 undefined on input line 329.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 334--336
 
@@ -997,10 +971,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 420--422
 
  []
 
-
-LaTeX Warning: Reference `figure:node graph' on page 14 undefined on input line 435.
-
-<img/Ros2Basics/Node_Graph.png, id=200, 1799.72375pt x 609.27625pt>
+<img/Ros2Basics/Node_Graph.png, id=399, 1799.72375pt x 609.27625pt>
 File: img/Ros2Basics/Node_Graph.png Graphic file (type png)
 <use img/Ros2Basics/Node_Graph.png>
 Package pdftex.def Info: img/Ros2Basics/Node_Graph.png  used on input line 437.
@@ -1076,7 +1047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 529--530
  []
 
 [16]
-<img/Ros2Basics/RQt_message_publisher.png, id=259, 595.22375pt x 369.38pt>
+<img/Ros2Basics/RQt_message_publisher.png, id=458, 595.22375pt x 369.38pt>
 File: img/Ros2Basics/RQt_message_publisher.png Graphic file (type png)
 <use img/Ros2Basics/RQt_message_publisher.png>
 Package pdftex.def Info: img/Ros2Basics/RQt_message_publisher.png  used on input line 541.
@@ -1091,7 +1062,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 555.
-<img/workspace/workspace.png, id=270, 978.65625pt x 460.72125pt>
+<img/workspace/workspace.png, id=467, 978.65625pt x 460.72125pt>
 File: img/workspace/workspace.png Graphic file (type png)
 <use img/workspace/workspace.png>
 Package pdftex.def Info: img/workspace/workspace.png  used on input line 564.
@@ -1121,154 +1092,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 665--665
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-main/default.pygstyle)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:678: Package catchfile Error: File `_minted-main/default.pygstyle' not found.
-
-See the catchfile package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.678 \end{minted}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-runsystem(pygmentize -S default -f latex -P commandprefix=PYG > _minted-main/default.pygstyle)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:678: Package catchfile Error: File `_minted-main/default.pygstyle' not found.
-
-See the catchfile package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.678 \end{minted}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:678: Package minted Error: Cannot find Pygments style default.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.678 \end{minted}
-                  
-Cannot find Pygments style default
-
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/4F63DBE7D5FEC25AE931AA56B02CBB535018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:678: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.678 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-main/default.pygstyle) (./_minted-main/4F63DBE7D5FEC25AE931AA56B02CBB535018845A16FEE2F871CFA2D2B2CFB1C6.pygtex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
+)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/E8D414EE44B7B8A9CED62019C4363EF45018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:692: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.692 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-[20]
+ (./_minted-main/E8D414EE44B7B8A9CED62019C4363EF45018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [20])
 Overfull \hbox (26.48012pt too wide) in paragraph at lines 702--703
 []\OT1/cmr/m/n/10 To pub-lish mes-sages, we have to cre-ate a timer. To do this, we use the \OT1/cmtt/m/n/10 create[]timer\OT1/cmr/m/n/10 (interval,
  []
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/EDFD48DAC02DE417F77627EB61072B965018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:711: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.711     \end{minted}
-                      
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-main/EDFD48DAC02DE417F77627EB61072B965018845A16FEE2F871CFA2D2B2CFB1C6.pygtex) [21]
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/81E43E134FC1DE29C206861A098A3FC55018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:743: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.743 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+ (./_minted-main/81E43E134FC1DE29C206861A098A3FC55018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/5649010F1F8F32773ED35FE0101341755018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:783: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.783 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-[21]
+ (./_minted-main/5649010F1F8F32773ED35FE0101341755018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [22])
 Overfull \hbox (12.90762pt too wide) in paragraph at lines 789--791
 \OT1/cmtt/m/n/10 create[]subscription(MessageType, topic[]name, callback, qos[]profile) \OT1/cmr/m/n/10 method.
  []
@@ -1284,73 +1127,17 @@ Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             Default family used instead on input line 804.
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/C82797FBF053E39DB508C1BCAC4877C05018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:818: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.818 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-main/C82797FBF053E39DB508C1BCAC4877C05018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/C0D16BCB1FA6E26B86E902336AB3112E5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:836: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.836 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+ (./_minted-main/C0D16BCB1FA6E26B86E902336AB3112E5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [23])
 Overfull \hbox (21.85548pt too wide) in paragraph at lines 838--840
 \OT1/cmr/m/n/10 node with the name \OT1/cmtt/m/n/10 random[]number[]publisher\OT1/cmr/m/n/10 , which is used to call the \OT1/cmtt/m/n/10 publish[]random[]number
  []
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/5438FDE64F3FC1BF2822831FFB9508CF5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:851: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.851 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+(./_minted-main/5438FDE64F3FC1BF2822831FFB9508CF5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 853--855
 
  []
@@ -1360,10 +1147,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 856--860
 
  []
 
-[22]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 871.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 872.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
@@ -1373,59 +1159,21 @@ Overfull \hbox (16.51923pt too wide) in paragraph at lines 873--874
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+[24]
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/D66D2C4C46032E2C0C7D09C7A40854DA5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:931: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.931 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+ (./_minted-main/D66D2C4C46032E2C0C7D09C7A40854DA5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [25])
 Overfull \hbox (32.38289pt too wide) in paragraph at lines 933--935
 \OT1/cmr/m/n/10 To add an en-try point, we have to add \OT1/cmtt/m/n/10 'executable[]name = my[]package.my[]python[]script:main'
  []
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l Python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/267F4C9B632719EB84F2B1C0AC8281B8360E91D77B40F6AB2A9DE4914DF5D2A9.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:942: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.942 \end{minted}
-                  
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+(./_minted-main/267F4C9B632719EB84F2B1C0AC8281B8360E91D77B40F6AB2A9DE4914DF5D2A9.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 944--946
 
  []
 
-[23]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 954.
@@ -1447,6 +1195,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 954.
+[26]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 964.
@@ -1466,71 +1215,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 968--970
 
  []
 
-[24]
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/DAC48B671D0F04AA01B406DC9C049A165018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1020: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1020 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-main/DAC48B671D0F04AA01B406DC9C049A165018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [27])
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/304AA478380337F3070A19BE228E00405018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1033: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1033 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+ (./_minted-main/304AA478380337F3070A19BE228E00405018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 1035--1038
 
  []
 
-
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 1069--1069
 [][][][]\OT1/fvm/m/n/8 https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-
  []
 
-[25]
-<img/Services/Service_Wiki.png, id=454, 702.625pt x 416.55624pt>
+<img/Services/Service_Wiki.png, id=655, 702.625pt x 416.55624pt>
 File: img/Services/Service_Wiki.png Graphic file (type png)
 <use img/Services/Service_Wiki.png>
 Package pdftex.def Info: img/Services/Service_Wiki.png  used on input line 1073.
 (pdftex.def)             Requested size: 397.48499pt x 235.6598pt.
-
-
-LaTeX Warning: Reference `Services' on page 26 undefined on input line 1074.
-
-[26 <./img/Services/Service_Wiki.png>]
+[29 <./img/Services/Service_Wiki.png>]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1118.
@@ -1657,10 +1362,10 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1133.
+ [30]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1141.
- [27]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1178.
@@ -1670,6 +1375,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1178.
+ [31]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1194.
@@ -1679,13 +1385,13 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1194.
- [28]
-<img/Services/service_caller_spawn.png, id=556, 606.265pt x 455.7025pt>
+ [32]
+<img/Services/service_caller_spawn.png, id=777, 606.265pt x 455.7025pt>
 File: img/Services/service_caller_spawn.png Graphic file (type png)
 <use img/Services/service_caller_spawn.png>
 Package pdftex.def Info: img/Services/service_caller_spawn.png  used on input line 1242.
 (pdftex.def)             Requested size: 397.48499pt x 298.77588pt.
- [29]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1256--1256
 [][][]\OT1/fvm/m/n/8 https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-
  []
@@ -1695,7 +1401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1259--1259
 [][][][]\OT1/fvm/m/n/8 https://www.umrechnung.org/masseinheiten-temperatur-celsius-fahrenheit-kelvin/celsius-fahrenheit-
  []
 
-[30 <./img/Services/service_caller_spawn.png>]
+[33 <./img/Services/service_caller_spawn.png>]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1277.
@@ -1705,7 +1411,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1277.
- [31]
+ [34]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1317.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1717,7 +1423,7 @@ Overfull \hbox (24.75974pt too wide) in paragraph at lines 1325--1327
 \OT1/cmr/m/n/10 language-specific code, we need to spec-ify a build tool de-pen-dency on it. \OT1/cmtt/m/n/10 rosidl[]default[]runtime
  []
 
-[32]
+[35]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1382.
@@ -1736,7 +1442,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1387.
- [33]
+ [36]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1400.
@@ -1754,80 +1460,17 @@ Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             Default family used instead on input line 1400.
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/7FEC873B32B1B30BB745954FE70E87F55018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1420: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1420 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+ (./_minted-main/7FEC873B32B1B30BB745954FE70E87F55018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/9CDAF292A2E00E62874F913353A8783C5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1440: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1440 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
-LaTeX Warning: Reference `eq:Fahrenheit' on page 34 undefined on input line 1443.
-
-
-LaTeX Warning: Reference `eq:Kelvin' on page 34 undefined on input line 1443.
-
-
+ (./_minted-main/9CDAF292A2E00E62874F913353A8783C5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [37])
 Overfull \hbox (7.02046pt too wide) in paragraph at lines 1442--1444
 \OT1/cmr/m/n/10 In this block, we ini-tial-ize our server node and call the \OT1/cmtt/m/n/10 create[]service(srv[]type, srv[]name,
  []
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/42C40829494E403EADB6C7D8E73E89565018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1454: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1454 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+(./_minted-main/42C40829494E403EADB6C7D8E73E89565018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 1465--1466
 
  []
@@ -1837,95 +1480,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 1468--1468
 [][][]\OT1/fvm/m/n/8 https://www.knowledgehut.com/blog/programming/sys-argv-python-examples#key-
  []
 
-[34]
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/C7CB01E4EB1F7C9BA2AA6C649CDC6E175018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1475: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1475 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-main/C7CB01E4EB1F7C9BA2AA6C649CDC6E175018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/2AF275F9FB4F7CF8686C764F77F8DAFA5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1495: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1495 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+ (./_minted-main/2AF275F9FB4F7CF8686C764F77F8DAFA5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [38])
 Underfull \hbox (badness 10000) in paragraph at lines 1496--1497
 
  []
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/99EC8A28B9A63C8948C53B0E1E469FE05018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
+(./_minted-main/99EC8A28B9A63C8948C53B0E1E469FE05018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [39])
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 1531.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 1531.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 1531.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 1531.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 1531.
+Package textcomp Info: Symbol \textminus not provided by
+(textcomp)             font family fvm in TS1 encoding.
+(textcomp)             Default family used instead on input line 1531.
 
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1516: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1516 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-Package textcomp Info: Symbol \textminus not provided by
-(textcomp)             font family fvm in TS1 encoding.
-(textcomp)             Default family used instead on input line 1531.
-Package textcomp Info: Symbol \textminus not provided by
-(textcomp)             font family fvm in TS1 encoding.
-(textcomp)             Default family used instead on input line 1531.
-Package textcomp Info: Symbol \textminus not provided by
-(textcomp)             font family fvm in TS1 encoding.
-(textcomp)             Default family used instead on input line 1531.
-Package textcomp Info: Symbol \textminus not provided by
-(textcomp)             font family fvm in TS1 encoding.
-(textcomp)             Default family used instead on input line 1531.
-Package textcomp Info: Symbol \textminus not provided by
-(textcomp)             font family fvm in TS1 encoding.
-(textcomp)             Default family used instead on input line 1531.
-Package textcomp Info: Symbol \textminus not provided by
-(textcomp)             font family fvm in TS1 encoding.
-(textcomp)             Default family used instead on input line 1531.
-[35]
 Underfull \hbox (badness 10000) in paragraph at lines 1556--1557
 
  []
@@ -1940,7 +1526,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1559--1561
 
  []
 
-[36]
+[40]
 Overfull \hbox (36.93286pt too wide) in paragraph at lines 1602--1604
 \OT1/cmr/m/n/10 the task of chang-ing pa-ram-e-ters, use the com-m-mand \OT1/cmtt/m/n/10 ros2 param set $\OML/cmm/m/it/10 <$\OT1/cmtt/m/n/10 node$\OML/cmm/m/it/10 >$ $<$\OT1/cmtt/m/n/10 node[]parameter$\OML/cmm/m/it/10 >$
  []
@@ -1950,7 +1536,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1612--1614
 
  []
 
-[37]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
 
  []
@@ -1975,54 +1561,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1672--1673
 
  []
 
-[38]
+[42]
 Overfull \hbox (47.58061pt too wide) in paragraph at lines 1674--1676
 \OT1/cmr/m/n/10 Inside the [][]\OT1/cmtt/m/n/10 intit[][] \OT1/cmr/m/n/10 func-tion of our class, we de-clare our pa-ram-e-ter with the \OT1/cmtt/m/n/10 declare[]parameter(name,
  []
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/B9581075327213CA6F1CC21B48CC92FC5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1679: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1679 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+(./_minted-main/B9581075327213CA6F1CC21B48CC92FC5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/BE14D5D3AC9BFC152C005EBA222AD0845018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1687: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1687 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+ (./_minted-main/BE14D5D3AC9BFC152C005EBA222AD0845018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 1712--1713
 
  []
@@ -2037,7 +1586,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1718--1719
 
  []
 
-[39]
+[43]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1731.
@@ -2124,7 +1673,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1758--1760
 
  []
 
-
+[44]
 Overfull \hbox (3.67497pt too wide) in paragraph at lines 1783--1787
 \OT1/cmtt/m/n/10 /turtle1/rotate[]absolute \OT1/cmr/m/n/10 ac-tion. In case you press a key in the \OT1/cmtt/m/n/10 /teleop[]turtle monitor\OT1/cmr/m/n/10 ,
  []
@@ -2134,7 +1683,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1783--1787
 
  []
 
-[40]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1790.
@@ -2161,7 +1709,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1826--1828
 
  []
 
-[41]
+[45]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1853.
@@ -2171,7 +1719,7 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1862.
- [42]
+ [46]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1878.
@@ -2189,94 +1737,21 @@ Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             Default family used instead on input line 1878.
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/EBDC3D85ECE962276D460A99CBA9E9CC5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1892: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1892 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+ (./_minted-main/EBDC3D85ECE962276D460A99CBA9E9CC5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/8C5E6D412C0DF7B8C30F20C083166F535018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1902: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1902 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+ (./_minted-main/8C5E6D412C0DF7B8C30F20C083166F535018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/93F6FD6A221EA3541D230983BDAF83AD5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1923: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1923 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-
+ (./_minted-main/93F6FD6A221EA3541D230983BDAF83AD5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 Underfull \hbox (badness 10000) in paragraph at lines 1925--1927
 
  []
 
+[47]
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/17C4E750C50751BA1A186F99F69C65985018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:1937: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1937 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
+ (./_minted-main/17C4E750C50751BA1A186F99F69C65985018845A16FEE2F871CFA2D2B2CFB1C6.pygtex)
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1945.
@@ -2295,29 +1770,19 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 1945.
-[43] [44]
-
-LaTeX Warning: Reference `fig:owl_kit' on page 45 undefined on input line 1964.
-
-<img/owl_kit.png, id=942, 487.8225pt x 541.02126pt>
+ [48]
+<img/owl_kit.png, id=1144, 487.8225pt x 541.02126pt>
 File: img/owl_kit.png Graphic file (type png)
 <use img/owl_kit.png>
 Package pdftex.def Info: img/owl_kit.png  used on input line 1975.
 (pdftex.def)             Requested size: 198.7425pt x 220.41675pt.
 
-LaTeX Warning: Reference `docs:owl_kit' on page 45 undefined on input line 1976.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1982--1984
 
  []
 
-[45 <./img/owl_kit.png>]
-
-LaTeX Warning: Reference `fig:olive_imu' on page 46 undefined on input line 2005.
-
-[46]
-<img/olive_imu_v2.9d7e1d59.png, id=977, 3854.4pt x 2168.1pt>
+[49 <./img/owl_kit.png>] [50]
+<img/olive_imu_v2.9d7e1d59.png, id=1179, 3854.4pt x 2168.1pt>
 File: img/olive_imu_v2.9d7e1d59.png Graphic file (type png)
 <use img/olive_imu_v2.9d7e1d59.png>
 Package pdftex.def Info: img/olive_imu_v2.9d7e1d59.png  used on input line 2015.
@@ -2328,22 +1793,22 @@ Package textcomp Info: Symbol \textminus not provided by
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 2048.
- [47 <./img/olive_imu_v2.9d7e1d59.png>]
+ [51 <./img/olive_imu_v2.9d7e1d59.png>]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 2049.
-<img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg, id=1002, 215.1293pt x 181.51535pt>
+<img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg, id=1202, 215.1293pt x 181.51535pt>
 File: img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg Graphic file (type jpg)
 <use img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg>
 Package pdftex.def Info: img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg  used on input line 2084.
 (pdftex.def)             Requested size: 198.7425pt x 167.69133pt.
- [48] [49 <./img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg>]
+ [52] [53 <./img/Graphical-representation-of-Euler-angles-with-respect-to-the-reference-axis-of-the_W640.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 2107--2108
 
  []
 
-[50]
-<img/PID_en.png, id=1061, 974.64125pt x 346.29375pt>
+[54]
+<img/PID_en.png, id=1259, 974.64125pt x 346.29375pt>
 File: img/PID_en.png Graphic file (type png)
 <use img/PID_en.png>
 Package pdftex.def Info: img/PID_en.png  used on input line 2155.
@@ -2353,39 +1818,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 2162--2164
 
  []
 
-[51 <./img/PID_en.png>]
-<img/olive_servo_v2.472abedd.png, id=1077, 3854.4pt x 2168.1pt>
+[55 <./img/PID_en.png>]
+<img/olive_servo_v2.472abedd.png, id=1275, 3854.4pt x 2168.1pt>
 File: img/olive_servo_v2.472abedd.png Graphic file (type png)
 <use img/olive_servo_v2.472abedd.png>
 Package pdftex.def Info: img/olive_servo_v2.472abedd.png  used on input line 2190.
 (pdftex.def)             Requested size: 198.7425pt x 111.78577pt.
-
-
-LaTeX Warning: Reference `fig:Servo' on page 52 undefined on input line 2198.
-
-[52 <./img/olive_servo_v2.472abedd.png>]
-
-LaTeX Warning: Reference `pid_testing_code' on page 53 undefined on input line 2223.
-
-
+ [56 <./img/olive_servo_v2.472abedd.png>]
 Overfull \hbox (55.12521pt too wide) in paragraph at lines 2218--2224
 \OT1/cmr/m/n/10 As you may have al-ready no-ticed, there is a new topic with the name \OT1/cmtt/m/n/10 /olive/servo/pan/goal/position\OT1/cmr/m/n/10 .
  []
 
-[53] [54]
+[57] [58]
 Overfull \hbox (30.77019pt too wide) in paragraph at lines 2279--2280
 []\OT1/cmr/m/n/10 Inside your \OT1/cmtt/m/n/10 olive[]servo package\OT1/cmr/m/n/10 , cre-ate a new script with the name \OT1/cmtt/m/n/10 imu[]control[]robot.py\OT1/cmr/m/n/10 . 
  []
 
-
-LaTeX Warning: Reference `fig:Camera_Module' on page 55 undefined on input line 2293.
-
-<img/olive-ai-camera-v2.20a7b87c.png, id=1116, 3854.4pt x 2168.1pt>
+<img/olive-ai-camera-v2.20a7b87c.png, id=1317, 3854.4pt x 2168.1pt>
 File: img/olive-ai-camera-v2.20a7b87c.png Graphic file (type png)
 <use img/olive-ai-camera-v2.20a7b87c.png>
 Package pdftex.def Info: img/olive-ai-camera-v2.20a7b87c.png  used on input line 2297.
 (pdftex.def)             Requested size: 198.7425pt x 111.78577pt.
-[55]
+[59]
 Overfull \hbox (5.7362pt too wide) in paragraph at lines 2304--2307
 \OT1/cmr/m/n/10 Once you've con-nected the mod-ule, en-sure that you set the cam-era's IP ad-dress to \OT1/cmtt/m/n/10 10.42.0.10
  []
@@ -2393,7 +1847,7 @@ Overfull \hbox (5.7362pt too wide) in paragraph at lines 2304--2307
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 2308.
-[56 <./img/olive-ai-camera-v2.20a7b87c.png>]
+[60 <./img/olive-ai-camera-v2.20a7b87c.png>]
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 2359.
@@ -2418,10 +1872,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2376--2378
 
  []
 
-
-LaTeX Warning: Reference `fn:qos' on page 57 undefined on input line 2381.
-
-[57]
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 2413--2415
 
  []
@@ -2431,7 +1882,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2416--2418
 
  []
 
-[58]
+[62]
 Underfull \hbox (badness 10000) in paragraph at lines 2419--2421
 
  []
@@ -2439,9 +1890,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 2419--2421
 Package textcomp Info: Symbol \textminus not provided by
 (textcomp)             font family fvm in TS1 encoding.
 (textcomp)             Default family used instead on input line 2427.
-
-LaTeX Warning: Reference `fn:qos' on page 59 undefined on input line 2442.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 2441--2443
 
@@ -2454,26 +1902,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2444--2446
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/5D4AF70B595D5D8CD301B299F32E194F5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:2457: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2457 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-[59] [60]
+(./_minted-main/5D4AF70B595D5D8CD301B299F32E194F5018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [63]) [64]
 Overfull \hbox (26.05356pt too wide) in paragraph at lines 2497--2550
  [][] 
  []
@@ -2485,59 +1914,28 @@ Overfull \hbox (26.05356pt too wide) in paragraph at lines 2558--2580
 
 \openout3 = `main.pyg'.
 
-runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/6695ACEAD44431EAE659B368BFCDB2215018845A16FEE2F871CFA2D2B2CFB1C6.pygtex main.pyg)...disabled (restricted).
-
-
-/home/fabian/Workspaces/ros2_workshop/course_script/main.tex:2649: Package minted Error: Missing Pygments output; \inputminted was
-probably given a file that does not exist--otherwise, you may need 
-the outputdir package option, or may be using an incompatible build tool,
-or may be using frozencache with a missing file.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2649 \end{minted}
-                   
-This could be caused by using -output-directory or -aux-directory 
-without setting minted's outputdir, or by using a build tool that 
-changes paths in ways minted cannot detect, 
-or using frozencache with a missing file.
-
-[61] [62] (./main.aux)
+(./_minted-main/6695ACEAD44431EAE659B368BFCDB2215018845A16FEE2F871CFA2D2B2CFB1C6.pygtex [65] [66]) [67] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  769A0C5406354B169BA7FB7FAEFAE23A;6784.
-runsystem(rm main.pyg)...disabled (restricted).
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 769A0C5406354B169BA7FB7FAEFAE23A;6784.
+runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31439 strings out of 478287
- 627441 string characters out of 5849288
- 1267426 words of memory out of 5000000
- 48184 multiletter control sequences out of 15000+600000
- 480283 words of font info for 70 fonts, out of 8000000 for 9000
+ 31647 strings out of 478287
+ 633626 string characters out of 5849288
+ 1270489 words of memory out of 5000000
+ 48325 multiletter control sequences out of 15000+600000
+ 479973 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,11n,80p,1402b,2383s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (62 pages, 8940843 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (67 pages, 8952301 bytes).
 PDF statistics:
- 1519 PDF objects out of 1728 (max. 8388607)
- 1356 compressed objects within 14 object streams
- 909 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1717 PDF objects out of 1728 (max. 8388607)
+ 1549 compressed objects within 16 object streams
+ 914 named destinations out of 1000 (max. 500000)
+ 446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

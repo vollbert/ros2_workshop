@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{data\PYGZus{}files}\PYG{o}{=}\PYG{p}{[}
+    \PYG{p}{(}\PYG{o}{...}\PYG{p}{),}
+    \PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}share\PYGZsq{}}\PYG{p}{,} \PYG{n}{package\PYGZus{}name}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}launch\PYGZsq{}}\PYG{p}{),}
+    \PYG{n}{glob}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}launch\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}*launch.[pxy][yma]*\PYGZsq{}}\PYG{p}{)))}
+\PYG{p}{],}
+\end{Verbatim}

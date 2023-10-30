@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{rclpy}
+\PYG{k+kn}{from} \PYG{n+nn}{rclpy.node} \PYG{k+kn}{import} \PYG{n}{Node}
+\PYG{k+kn}{from} \PYG{n+nn}{std\PYGZus{}msgs.msg} \PYG{k+kn}{import} \PYG{n}{Int32}  \PYG{c+c1}{\PYGZsh{} Import the message type}
+
+\PYG{k}{class} \PYG{n+nc}{MySubscriber}\PYG{p}{(}\PYG{n}{Node}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}my\PYGZus{}subscriber\PYGZsq{}}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Specify node name}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{subscription} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}subscription}\PYG{p}{(}
+            \PYG{n}{Int32}\PYG{p}{,}
+            \PYG{l+s+s1}{\PYGZsq{}my\PYGZus{}topic\PYGZsq{}}\PYG{p}{,}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{callback}\PYG{p}{,}
+            \PYG{l+m+mi}{10}
+        \PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{callback}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{msg}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}logger}\PYG{p}{()}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}Received: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{msg}\PYG{o}{.}\PYG{n}{data}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{args}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{):}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{init}\PYG{p}{(}\PYG{n}{args}\PYG{o}{=}\PYG{n}{args}\PYG{p}{)}
+    \PYG{n}{subscriber} \PYG{o}{=} \PYG{n}{MySubscriber}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Create an instance of the subscriber node class}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{spin}\PYG{p}{(}\PYG{n}{subscriber}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Spin the node}
+    \PYG{n}{subscriber}\PYG{o}{.}\PYG{n}{destroy\PYGZus{}node}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Clean up}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{shutdown}\PYG{p}{()}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

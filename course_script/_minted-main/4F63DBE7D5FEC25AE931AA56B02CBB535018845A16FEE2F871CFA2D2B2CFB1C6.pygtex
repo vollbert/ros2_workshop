@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{rclpy}
+\PYG{k+kn}{from} \PYG{n+nn}{rclpy.node} \PYG{k+kn}{import} \PYG{n}{Node}     \PYG{c+c1}{\PYGZsh{} Import the node class}
+\PYG{k+kn}{from} \PYG{n+nn}{std\PYGZus{}msgs.msg} \PYG{k+kn}{import} \PYG{n}{Int32}  \PYG{c+c1}{\PYGZsh{} Import the message type}
+\end{Verbatim}

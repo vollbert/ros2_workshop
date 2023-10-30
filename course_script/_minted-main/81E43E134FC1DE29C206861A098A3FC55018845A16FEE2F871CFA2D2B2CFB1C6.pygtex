@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{args}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{):}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{init}\PYG{p}{(}\PYG{n}{args}\PYG{o}{=}\PYG{n}{args}\PYG{p}{)}
+    \PYG{n}{publisher} \PYG{o}{=} \PYG{n}{MyPublisher}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Create an instance of the publisher node class}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{spin}\PYG{p}{(}\PYG{n}{publisher}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Spin the node}
+    \PYG{n}{publisher}\PYG{o}{.}\PYG{n}{destroy\PYGZus{}node}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Clean up}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{shutdown}\PYG{p}{()}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{launch} \PYG{k+kn}{import} \PYG{n}{LaunchDescription}
+
+\PYG{k}{def} \PYG{n+nf}{generate\PYGZus{}launch\PYGZus{}description}\PYG{p}{():}
+    \PYG{k}{return} \PYG{n}{LaunchDescription}\PYG{p}{([}
+    \PYG{p}{])}
+\end{Verbatim}

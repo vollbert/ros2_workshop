@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{declare\PYGZus{}parameter}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}upper\PYGZus{}limit\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+\end{Verbatim}

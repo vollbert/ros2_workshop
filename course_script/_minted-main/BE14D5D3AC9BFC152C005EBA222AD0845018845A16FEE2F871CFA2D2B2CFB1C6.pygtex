@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{upper\PYGZus{}limit} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}parameter}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}upper\PYGZus{}limit\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{get\PYGZus{}parameter\PYGZus{}value}\PYG{p}{()}\PYG{o}{.}\PYG{n}{integer\PYGZus{}value}
+\PYG{n}{random\PYGZus{}number} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{upper\PYGZus{}limit}\PYG{p}{)}
+\end{Verbatim}

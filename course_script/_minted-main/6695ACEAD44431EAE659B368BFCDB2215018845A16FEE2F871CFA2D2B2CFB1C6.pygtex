@@ -1,0 +1,63 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{math}
+\PYG{k+kn}{import} \PYG{n+nn}{rclpy}
+\PYG{k+kn}{from} \PYG{n+nn}{rclpy.node} \PYG{k+kn}{import} \PYG{n}{Node}
+
+\PYG{k+kn}{from} \PYG{n+nn}{std\PYGZus{}msgs.msg} \PYG{k+kn}{import} \PYG{n}{Float32}
+\PYG{k+kn}{from} \PYG{n+nn}{std\PYGZus{}srvs.srv} \PYG{k+kn}{import} \PYG{n}{Trigger}
+
+
+\PYG{k}{class} \PYG{n+nc}{ControlServo}\PYG{p}{(}\PYG{n}{Node}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}control\PYGZus{}servo\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{service\PYGZus{}enable\PYGZus{}torque} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}client}\PYG{p}{(}\PYG{n}{Trigger}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}/olive/servo/pan/setTorqueEnable\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{service\PYGZus{}disable\PYGZus{}torque} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}client}\PYG{p}{(}\PYG{n}{Trigger}\PYG{p}{,}
+        \PYG{l+s+s2}{\PYGZdq{}/olive/servo/pan/setTorqueDisable\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{while} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{service\PYGZus{}enable\PYGZus{}torque}\PYG{o}{.}\PYG{n}{wait\PYGZus{}for\PYGZus{}service}\PYG{p}{(}\PYG{n}{timeout\PYGZus{}sec}\PYG{o}{=}\PYG{l+m+mf}{1.0}\PYG{p}{):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}logger}\PYG{p}{()}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}service not available\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{while} \PYG{o+ow}{not} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{service\PYGZus{}disable\PYGZus{}torque}\PYG{o}{.}\PYG{n}{wait\PYGZus{}for\PYGZus{}service}\PYG{p}{(}\PYG{n}{timeout\PYGZus{}sec}\PYG{o}{=}\PYG{l+m+mf}{1.0}\PYG{p}{):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}logger}\PYG{p}{()}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}service not available\PYGZdq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{request\PYGZus{}enable\PYGZus{}torque} \PYG{o}{=} \PYG{n}{Trigger}\PYG{o}{.}\PYG{n}{Request}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{request\PYGZus{}disable\PYGZus{}torque} \PYG{o}{=} \PYG{n}{Trigger}\PYG{o}{.}\PYG{n}{Request}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{topic\PYGZus{}gp} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}/olive/servo/pan/goal/position\PYGZdq{}}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publisher} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}publisher}\PYG{p}{(}\PYG{n}{Float32}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{topic\PYGZus{}gp}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{timer} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{create\PYGZus{}timer}\PYG{p}{(}\PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publish\PYGZus{}goal}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state} \PYG{o}{=} \PYG{k+kc}{True}
+
+    \PYG{k}{def} \PYG{n+nf}{enable\PYGZus{}torque}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{future} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{service\PYGZus{}enable\PYGZus{}torque}\PYG{o}{.}\PYG{n}{call\PYGZus{}async}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{request\PYGZus{}enable\PYGZus{}torque}\PYG{p}{)}
+        \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{spin\PYGZus{}until\PYGZus{}future\PYGZus{}complete}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{future}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{disable\PYGZus{}torque}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{future} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{service\PYGZus{}disable\PYGZus{}torque}\PYG{o}{.}\PYG{n}{call\PYGZus{}async}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{request\PYGZus{}disable\PYGZus{}torque}\PYG{p}{)}
+        \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{spin\PYGZus{}until\PYGZus{}future\PYGZus{}complete}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{future}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{publish\PYGZus{}goal}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{msg} \PYG{o}{=} \PYG{n}{Float32}\PYG{p}{()}
+
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state} \PYG{o}{==} \PYG{k+kc}{True}\PYG{p}{:}
+            \PYG{n}{msg}\PYG{o}{.}\PYG{n}{data} \PYG{o}{=} \PYG{l+m+mf}{1.57}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state} \PYG{o}{=} \PYG{k+kc}{False}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{msg}\PYG{o}{.}\PYG{n}{data} \PYG{o}{=} \PYG{l+m+mf}{0.0}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{state} \PYG{o}{=} \PYG{k+kc}{True}
+
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publisher}\PYG{o}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{main}\PYG{p}{():}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{init}\PYG{p}{()}
+    \PYG{n}{cntrl\PYGZus{}publisher} \PYG{o}{=} \PYG{n}{ControlServo}\PYG{p}{()}
+
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{n}{cntrl\PYGZus{}publisher}\PYG{o}{.}\PYG{n}{enable\PYGZus{}torque}\PYG{p}{()}
+        \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{spin}\PYG{p}{(}\PYG{n}{cntrl\PYGZus{}publisher}\PYG{p}{)}
+    \PYG{k}{except} \PYG{n+ne}{KeyboardInterrupt}\PYG{p}{:}
+        \PYG{n}{cntrl\PYGZus{}publisher}\PYG{o}{.}\PYG{n}{disable\PYGZus{}torque}\PYG{p}{()}
+        \PYG{n}{cntrl\PYGZus{}publisher}\PYG{o}{.}\PYG{n}{destroy\PYGZus{}node}\PYG{p}{()}
+        \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{shutdown}\PYG{p}{()}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZdq{}}\PYG{p}{:}
+    \PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

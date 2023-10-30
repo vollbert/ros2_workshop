@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{main}\PYG{p}{():}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{init}\PYG{p}{()}
+    \PYG{n}{temp\PYGZus{}service} \PYG{o}{=} \PYG{n}{TempService}\PYG{p}{()}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{spin}\PYG{p}{(}\PYG{n}{temp\PYGZus{}service}\PYG{p}{)}
+    \PYG{n}{rclpy}\PYG{o}{.}\PYG{n}{shutdown}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

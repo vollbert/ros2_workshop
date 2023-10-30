@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{setuptools} \PYG{k+kn}{import} \PYG{n}{setup}
+
+\PYG{n}{package\PYGZus{}name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}random\PYGZus{}number\PYGZus{}ps\PYGZsq{}}
+
+\PYG{n}{setup}\PYG{p}{(}
+    \PYG{n}{name}\PYG{o}{=}\PYG{n}{package\PYGZus{}name}\PYG{p}{,}
+    \PYG{n}{version}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}0.0.0\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{packages}\PYG{o}{=}\PYG{p}{[}\PYG{n}{package\PYGZus{}name}\PYG{p}{],}
+    \PYG{n}{data\PYGZus{}files}\PYG{o}{=}\PYG{p}{[}
+        \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}share/ament\PYGZus{}index/resource\PYGZus{}index/packages\PYGZsq{}}\PYG{p}{,}
+            \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}resource/\PYGZsq{}} \PYG{o}{+} \PYG{n}{package\PYGZus{}name}\PYG{p}{]),}
+        \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}share/\PYGZsq{}} \PYG{o}{+} \PYG{n}{package\PYGZus{}name}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}package.xml\PYGZsq{}}\PYG{p}{]),}
+    \PYG{p}{],}
+    \PYG{n}{install\PYGZus{}requires}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}setuptools\PYGZsq{}}\PYG{p}{],}
+    \PYG{n}{zip\PYGZus{}safe}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,}
+    \PYG{n}{maintainer}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}fabian\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{maintainer\PYGZus{}email}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}fabian@todo.todo\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{description}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}TODO: Package description\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{license}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}TODO: License declaration\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{tests\PYGZus{}require}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}pytest\PYGZsq{}}\PYG{p}{],}
+    \PYG{n}{entry\PYGZus{}points}\PYG{o}{=}\PYG{p}{\PYGZob{}}
+        \PYG{l+s+s1}{\PYGZsq{}console\PYGZus{}scripts\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{p}{],}
+    \PYG{p}{\PYGZcb{},}
+\PYG{p}{)}
+\end{Verbatim}

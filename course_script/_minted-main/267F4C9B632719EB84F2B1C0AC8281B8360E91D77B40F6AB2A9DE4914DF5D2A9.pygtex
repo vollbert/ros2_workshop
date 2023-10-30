@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{entry\PYGZus{}points}\PYG{o}{=}\PYG{p}{\PYGZob{}}
+    \PYG{l+s+s1}{\PYGZsq{}console\PYGZus{}scripts\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}
+        \PYG{l+s+s1}{\PYGZsq{}random\PYGZus{}number\PYGZus{}publisher = random\PYGZus{}number\PYGZus{}ps.random\PYGZus{}number\PYGZus{}publisher:main\PYGZsq{}}
+    \PYG{p}{],}
+\PYG{p}{\PYGZcb{},}
+\end{Verbatim}

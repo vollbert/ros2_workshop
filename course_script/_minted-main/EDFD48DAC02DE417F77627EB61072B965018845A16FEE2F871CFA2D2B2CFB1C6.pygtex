@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+        \PYG{k}{def} \PYG{n+nf}{callback\PYGZus{}function}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{msg} \PYG{o}{=} \PYG{n}{Int32}\PYG{p}{()}  \PYG{c+c1}{\PYGZsh{} Create an instance of the message type}
+        \PYG{n}{msg}\PYG{o}{.}\PYG{n}{data} \PYG{o}{=} \PYG{l+m+mi}{7}  \PYG{c+c1}{\PYGZsh{} Set the message data}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{publisher\PYGZus{}}\PYG{o}{.}\PYG{n}{publish}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} Publish the message}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{get\PYGZus{}logger}\PYG{p}{()}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Published: }\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{data}\PYG{p}{)}
+\end{Verbatim}

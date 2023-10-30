@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{rclpy}
+\PYG{k+kn}{from} \PYG{n+nn}{rclpy.node} \PYG{k+kn}{import} \PYG{n}{Node}
+\PYG{k+kn}{from} \PYG{n+nn}{std\PYGZus{}msgs.msg} \PYG{k+kn}{import} \PYG{n}{Int32}
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+\end{Verbatim}

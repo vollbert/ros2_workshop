@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Node}\PYG{p}{(}
+    \PYG{n}{package}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}turtlesim\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{executable}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}turtlesim\PYGZus{}node\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}turtle2\PYGZsq{}}\PYG{p}{,}
+\PYG{p}{),}
+\end{Verbatim}
